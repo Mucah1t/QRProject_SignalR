@@ -18,7 +18,7 @@ namespace SignalR.BusinessLayer.Concrete
             _socialMediaDal = socialMediaDal;
         }
 
-        public List<SocialMedia> GTetAll()
+        public List<SocialMedia> TGetAll()
         {
             return _socialMediaDal.GetAll();    
         }

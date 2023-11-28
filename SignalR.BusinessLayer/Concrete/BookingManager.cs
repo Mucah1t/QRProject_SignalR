@@ -18,7 +18,7 @@ namespace SignalR.BusinessLayer.Concrete
             _bookingDal = bookingDal;
         }
 
-        public List<Booking> GTetAll()
+        public List<Booking> TGetAll()
         {
             return _bookingDal.GetAll();
         }

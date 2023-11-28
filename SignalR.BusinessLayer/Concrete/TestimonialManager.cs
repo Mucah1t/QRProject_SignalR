@@ -18,7 +18,7 @@ namespace SignalR.BusinessLayer.Concrete
             _testimonialDal = testimonialDal;
         }
 
-        public List<Testimonial> GTetAll()
+        public List<Testimonial> TGetAll()
         {
             return _testimonialDal.GetAll();
         }

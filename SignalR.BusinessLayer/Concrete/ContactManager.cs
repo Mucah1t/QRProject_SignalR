@@ -18,7 +18,7 @@ namespace SignalR.BusinessLayer.Concrete
             _contactDal = contactDal;
         }
 
-        public List<Contact> GTetAll()
+        public List<Contact> TGetAll()
         {
             return _contactDal.GetAll();    
         }

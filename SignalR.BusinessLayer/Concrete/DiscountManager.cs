@@ -18,7 +18,7 @@ namespace SignalR.BusinessLayer.Concrete
             _discountDal = discountDal;
         }
 
-        public List<Discount> GTetAll()
+        public List<Discount> TGetAll()
         {
            return _discountDal.GetAll();
         }

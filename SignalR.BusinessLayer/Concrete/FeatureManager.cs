@@ -18,7 +18,7 @@ namespace SignalR.BusinessLayer.Concrete
             _featureDal = featureDal;
         }
 
-        public List<Feature> GTetAll()
+        public List<Feature> TGetAll()
         {
             return _featureDal.GetAll();
         }
