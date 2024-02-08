@@ -35,14 +35,14 @@ namespace SignalRApi.Controllers
             });
             return Ok("Category has been created.");
         }
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public IActionResult DeleteCategory(int id)
         {
             var value= _categoryService.TGetByID(id);
             _categoryService.TDelete(value);
             return Ok("The category has been deleted.");
         }
-        [HttpGet("GetCategory")]
+        [HttpGet("{id}")]
         public IActionResult GetCategory(int id)
         {
             var value = _categoryService.TGetByID(id);
