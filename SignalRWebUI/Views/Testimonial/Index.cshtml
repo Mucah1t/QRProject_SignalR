@@ -1,0 +1,55 @@
+﻿@model List<ResultTestimonialDto>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+    int count = 0;
+
+}
+
+
+<div class="content">
+    <div class="container-fluid">
+        <h4 class="page-title">Customer Comment Operations</h4>
+        <div class="row">
+            <div class="col-md-12">
+
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">Customer Comment List</div>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-sub">
+                          You can take action regarding the comments made by customers below.
+                        </div>
+                        <table class="table mt-3">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Name&Surname</th>
+                                    <th scope="col">Status</th>
+                                    <th scope="col">Remove</th>
+                                    <th scope="col">Edit</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    count++;
+                                    <tr>
+                                        <th>@count</th>
+                                        <td>@item.Name</td>
+                                        <td>@item.Status</td>
+                                        <td><a href="/Testimonial/DeleteTestimonial/@item.TestimonialID" class="btn btn-outline-danger">Remove</a></td>
+                                        <td><a href="/Testimonial/UpdateTestimonial/@item.TestimonialID" class="btn btn-outline-success">Edit</a></td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                        <a href="/Testimonial/CreateTestimonial/" class="btn btn-outline-primary">New Customer Review</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

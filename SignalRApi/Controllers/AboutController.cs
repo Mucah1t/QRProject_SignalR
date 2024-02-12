@@ -34,7 +34,7 @@ namespace SignalRApi.Controllers
             _aboutService.TAdd(about);
             return Ok("Inserting has successfully done.");
         }
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public IActionResult DeleteAbout(int id)
         {
             var value= _aboutService.TGetByID(id);
@@ -54,7 +54,7 @@ namespace SignalRApi.Controllers
             _aboutService.TUpdate(about);
             return Ok("Datas has been updated.");
         }
-        [HttpGet("GetAbout")]
+        [HttpGet("{id}")]
         public IActionResult GetAbout(int id)
         {
             var value= _aboutService.TGetByID(id);

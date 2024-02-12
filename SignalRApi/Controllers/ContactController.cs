@@ -38,14 +38,14 @@ namespace SignalRApi.Controllers
             });
             return Ok("Contact has been created.");
         }
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public IActionResult DeleteContact(int id)
         {
             var value = _contactService.TGetByID(id);
             _contactService.TDelete(value);
             return Ok("The contact has been deleted.");
         }
-        [HttpGet("GetContact")]
+        [HttpGet("{id}")]
         public IActionResult GetContact(int id)
         {
             var value = _contactService.TGetByID(id);
